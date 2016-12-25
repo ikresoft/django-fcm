@@ -54,6 +54,12 @@ class FCMMessage(object):
             yield items[i:i + limit]
 
     def send(self, data, registration_ids=None, **kwargs):
+        print "SENDING"
+        if not isinstance(data, dict):
+            data = {'msg': data}
+
+        registration_ids = registration_ids or []
+
         if len(registration_ids) == 1:
             response = self.push_service.notify_single_device(
                 registration_id=registration_ids[0], data_message=data,
