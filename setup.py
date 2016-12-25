@@ -9,7 +9,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-fcm',
-    version='0.1.1',
+    version='0.2.0',
     packages=find_packages(),
     include_package_data=True,
     description='A Django package that enables sending messages using FCM (Firebase Cloud Messaging).',
@@ -39,6 +39,6 @@ setup(
         'django>=1.9',
         'djangorestframework>=3.3.2',
         'pytz>=2015.7',
-        'requests>=2.9.1'
+        'pyfcm>=1.2.1'
     ],
 )
