@@ -54,7 +54,6 @@ class FCMMessage(object):
             yield items[i:i + limit]
 
     def send(self, data, registration_ids=None, **kwargs):
-        print "SENDING"
         if not isinstance(data, dict):
             data = {'msg': data}
 
