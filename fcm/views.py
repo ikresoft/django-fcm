@@ -22,7 +22,7 @@ class DeviceViewSet(viewsets.ModelViewSet):
             device = Device(dev_id=serializer.data["dev_id"])
         device.is_active = True
         device.reg_id = serializer.data["reg_id"]
-        device.name = serializer.data["name"]
+        device.name = serializer.data["name"] if "name" in serializer.data else "Unknown"
         device.save()
 
     def destroy(self, request, *args, **kwargs):
