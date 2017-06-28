@@ -86,7 +86,7 @@ class FCMMessage(FCMMessage):
         return response
 
     def post_send(self, registration_ids, response):
-        if response.get('failure'):
+        if 'failure' in response:
             invalid_messages = dict(filter(
                 lambda x: x[1].get('error') in self.FCM_INVALID_ID_ERRORS,
                 zip(registration_ids, response.get('results'))))
