@@ -39,6 +39,6 @@ setup(
         'django>=1.9',
         'djangorestframework>=3.3.2',
         'pytz>=2015.7',
-        'pyfcm>=1.3.1'
+        'pyfcm>=1.4.2'
     ],
 )
